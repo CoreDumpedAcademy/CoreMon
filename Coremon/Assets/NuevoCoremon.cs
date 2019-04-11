@@ -5,12 +5,10 @@ using UnityEngine;
 public class NuevoCoremon : MonoBehaviour
 {
 
-    bool newPokemon;
     int prob;
 
     public void start()
     {
-        newPokemon = false;
     }
 
     public void Update()
