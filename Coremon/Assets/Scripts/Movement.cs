@@ -18,15 +18,15 @@ public class Movement : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x + move, transform.position.y);
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             transform.position = new Vector2(transform.position.x - move, transform.position.y);
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + move);
         }
-        if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             transform.position = new Vector2(transform.position.x, transform.position.y - move);
         }
