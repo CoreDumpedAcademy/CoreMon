@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< HEAD
 
         if(dir == Vector3.zero)
         {
@@ -43,6 +44,21 @@ public class Movement : MonoBehaviour
                 dir = Vector3.down;
             }
         } else
+=======
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.position = new Vector2(transform.position.x + move, transform.position.y);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            transform.position = new Vector2(transform.position.x - move, transform.position.y);
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y + move);
+        }
+        else if (Input.GetKey(KeyCode.S))
+>>>>>>> 3f35cc2077f52e611d1985e2230546578df34df8
         {
             //Move if stored direction
 
