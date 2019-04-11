@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class hierbaAlta : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    float probCoremon = 0;
+    
+    private void OnTriggerEnter2D(Collider other)
     {
-        
+        probCoremon = Mathf.Round(Random.Range(0f,1000f));
+
+        if(probCoremon <= 50f)
+        {
+            Debug.Log("Pokemon apears");
+        }
     }
 }
