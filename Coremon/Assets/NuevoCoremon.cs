@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NuevoCoremon : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class NuevoCoremon : MonoBehaviour
     {
         if(prob > Random.Range(1,100))
         {
-            //Activar escena batalla y script pokemon nuevo
+            SceneManager.LoadScene("Battle");
         }
     }
 }
