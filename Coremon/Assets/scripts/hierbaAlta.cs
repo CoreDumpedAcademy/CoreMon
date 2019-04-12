@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class hierbaAlta : MonoBehaviour
 {
-    float probCoremon = 0;
+    float suerte = 0f;
+    float probCoremon = 5f;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        probCoremon = Mathf.Round(Random.Range(0f,1000f));
+        Debug.Log("col");
 
-        if(probCoremon <= 50f)
+        if (other.gameObject.tag == "hierba")
         {
-            Debug.Log("Pokemon apears");
+            Debug.Log("inside: " + probCoremon);
+
+            suerte = Mathf.Round(Random.Range(0f, 100f));
+
+            if (suerte <= probCoremon)
+            {
+                Debug.Log("Pokemon apears");
+                probCoremon = 5f;
+            }
         }
+
     }
 }
