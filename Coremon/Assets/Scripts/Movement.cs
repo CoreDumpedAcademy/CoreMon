@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float gridSize = 1f;
     public float moveSpeed = 0.2f;
+    public GameObject camera;
 
     private Vector3 destination;
     private Vector3 dir;
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        camera.transform.position = transform.position - new Vector3(0f,0f,10f);
 
         if(dir == Vector3.zero)
         {
