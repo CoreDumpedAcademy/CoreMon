@@ -22,7 +22,7 @@ public class NuevoCoremon : MonoBehaviour
         if(col.gameObject.tag == "hierba")
         {
             prob++;
-
+            appearCoremon();
         }
     }
 
