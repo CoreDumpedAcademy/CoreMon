@@ -13,13 +13,14 @@ public class BattleController : MonoBehaviour
     void Update()
     {
         action = menu.getActions();                   //Calling the menu controller to open the menu and get an action
-        Debug.Log(action);
-
+       // Debug.Log(action);
+        if(action != menuOptions.None)
+        {
+            BattleMenuOptions.opciones(action);
+        }
         //Do stuff according to the actions received
 
     }
-
-
 
     //Enum listing the actions the controller will take
     //Referenced by Menu Controller
