@@ -56,6 +56,7 @@ public class MenuController : MonoBehaviour
 
                     if (keyInput == menuInput.Yes)
                     {
+                        keyInput = menuInput.No;
                         return BattleController.menuOptions.Atacar;
                     }
 
@@ -66,6 +67,7 @@ public class MenuController : MonoBehaviour
 
                     if (keyInput == menuInput.Yes)
                     {
+                        keyInput = menuInput.No;
                         return BattleController.menuOptions.Capturar;
                     }
 
@@ -76,6 +78,7 @@ public class MenuController : MonoBehaviour
 
                     if (keyInput == menuInput.Yes)
                     {
+                        keyInput = menuInput.No;
                         return BattleController.menuOptions.Huir; 
                     }
 
@@ -86,6 +89,7 @@ public class MenuController : MonoBehaviour
 
                     if (keyInput == menuInput.Yes)
                     {
+                        keyInput = menuInput.No;
                         return BattleController.menuOptions.Cambiar;
                     }
                     break;

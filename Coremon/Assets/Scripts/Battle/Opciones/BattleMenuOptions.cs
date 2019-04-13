@@ -20,16 +20,17 @@ public class BattleMenuOptions : MonoBehaviour
             if (Capture.capturar())
             {
                 Capture.n = 1;
-                SceneManager.LoadScene("Game");
+                //SceneManager.LoadScene("Game");
             }
             else
             {
                 Capture.n++;
             }
+            Debug.Log(Capture.n);
         }
         else if (action == BattleController.menuOptions.Huir)
         {
-            SceneManager.LoadScene("Game");
+            //SceneManager.LoadScene("Game");
         }
     }
 }
