@@ -12,7 +12,10 @@ public class BattleController : MonoBehaviour
     }
     void Update()
     {
-        action = menu.getActions();                   //Calling the menu controller to open the menu and get an action
+        if (!Atack.atacando)
+        {
+            action = menu.getActions();                   //Calling the menu controller to open the menu and get an action
+        }
         if(action != menuOptions.None)
         {
             BattleMenuOptions.opciones(action);

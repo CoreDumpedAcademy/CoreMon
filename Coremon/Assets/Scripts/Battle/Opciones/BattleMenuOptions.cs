@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class BattleMenuOptions : MonoBehaviour
 {
     public static void opciones(BattleController.menuOptions action)
-    {
+    {    
         if (action == BattleController.menuOptions.Atacar)
         {
-           Atack.atack();
+           Atack.atacando=true;
         }
         else if (action == BattleController.menuOptions.Cambiar)
         {
