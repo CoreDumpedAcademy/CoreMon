@@ -20,10 +20,38 @@ public class Atack : MonoBehaviour
     private void Update()
     {
         if (atacando && !selecAtac){
-            Debug.Log("marmota");
             pointerAtackUI.SetActive(true);
             masterPointerUI.SetActive(false);
             selecAtac = true;
         }
+        if(!atacando && selecAtac)
+        {
+            selecAtac = false;
+            pointerAtackUI.SetActive(false);
+            masterPointerUI.SetActive(true);
+            Debug.Log("marmota");
+        }
+    }
+
+    public static void atack(AtackMenu.menuOptions action)
+    {
+        if (action == AtackMenu.menuOptions.At1)
+        {
+            //ataque 1
+        }
+        else if (action == AtackMenu.menuOptions.At2)
+        {
+            //ataque 2
+        }
+        else if (action == AtackMenu.menuOptions.At3)
+        {
+            //ataque 3
+        }
+        else if (action == AtackMenu.menuOptions.At4)
+        {
+            //ataque 4
+        }
+        atacando = false;
+        Debug.Log("marmota2");
     }
 }

@@ -12,14 +12,15 @@ public class AtackMenu : MonoBehaviour
     }
     void Update()
     {
+        if (action != menuOptions.None)//execute the action by activating and deactivating the UIs
+        {
+            Atack.atacando = true;
+            Atack.atack(action);
+            action = menuOptions.None;
+        }
         if (Atack.atacando)
         {
             action = menu.getActions();                   //Calling the menu controller to open the menu and get an action
-        }
-        if (action != menuOptions.None)
-        {
-            //Atack.atack(action);
-            action = menuOptions.None;
         }
         //Do stuff according to the actions received
 
