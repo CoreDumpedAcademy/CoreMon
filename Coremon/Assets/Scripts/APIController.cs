@@ -91,30 +91,6 @@ public class Item
 }
 
 [Serializable]
-public class Coremon
-{
-    public string name;
-    public string Type;
-    public int NumCoremon;
-    public int Level;
-    public int ExpPoints;
-    public int LvlUpExp;
-    public int Ps;
-    public int Dam;
-    public int Def;
-    public int Vel;
-    public Attack[] Atacks;
-}
-
-[Serializable]
-public class Attack
-{
-    public string name;
-    public string Type;
-    public int Power;
-}
-
-[Serializable]
 public class UserInfo
 {
     public string username;
