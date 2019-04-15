@@ -13,7 +13,7 @@ public class APIController : MonoBehaviour
     public UserInfo saveData;
 
     //FOR TESTING
-    /*
+
     private void Start()
     {
         string user = "nyan3";
@@ -25,7 +25,7 @@ public class APIController : MonoBehaviour
 
         saveSaveData(saveData);
     }
-    */
+
 
 
     //API GET request to load user's save data after authoritation
@@ -88,12 +88,6 @@ public class Item
 {
     public string name;
     public int amount;
-}
-
-[Serializable]
-public class Coremon
-{
-    public string name;
 }
 
 [Serializable]
