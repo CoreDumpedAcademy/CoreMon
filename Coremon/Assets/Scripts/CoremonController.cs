@@ -145,6 +145,7 @@ public class Coremon
     public int Level;
     public int ExpPoints;
     public int LvlUpExp;
+    public int PsMax;
     public int Ps;
     public int Dam;
     public int Def;
@@ -159,6 +160,7 @@ public class Coremon
         this.Level = 1;
         this.ExpPoints = 0;
         CoremonController.setLvlUpExp(this);
+        this.PsMax = 1;
         this.Ps = 1;
         this.Dam = 1;
         this.Def = 1;

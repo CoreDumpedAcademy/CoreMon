@@ -6,6 +6,10 @@ public class BattleController : MonoBehaviour
 {
     menuOptions action = menuOptions.None;     //Action the Battle controller will do next
     MenuController menu;                       //Menu controller has all the functions that controll the menu
+
+    public Coremon cor = new Coremon();
+    public Coremon enemyCor;
+
     private void Start()
     {
         menu = gameObject.GetComponent<MenuController>();     //Initializing menu controller script
