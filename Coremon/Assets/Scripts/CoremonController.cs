@@ -88,8 +88,9 @@ public class CoremonController : MonoBehaviour
             ExpGauge = initialLvlUpExp;  //Set initial value at lvl 1 
         }else if(mon.Level > 1)
         {
-            //lvlUpExp = initialExp * increaseFactor ^ level
-            ExpGauge = Mathf.CeilToInt(initialLvlUpExp * Mathf.Pow(lvlUpExpIncreaseFactor, mon.Level));
+            //lvlUpExp = initialExp * ( 1 + increaseFactor ) ^ level
+            Debug.Log(Mathf.Pow(lvlUpExpIncreaseFactor, mon.Level));
+            ExpGauge = Mathf.CeilToInt(initialLvlUpExp * Mathf.Pow( 1 + lvlUpExpIncreaseFactor, mon.Level));
         }
 
         mon.LvlUpExp = ExpGauge;

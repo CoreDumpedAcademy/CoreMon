@@ -1,0 +1,962 @@
+[
+    {
+        "name": "Tomatoad",
+        "Type": "Planta",
+        "NumCoremon": "01",
+        "Level": "10",
+        "Ps": "110",
+        "Dam": "75",
+        "Def": "70",
+        "Vel": "90",
+        "Atacks": [
+            {
+                "name": "Absorbcion de Vida",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Pistola liquidillo",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Jugoso ABC",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Ensalada",
+                "Type": "Planta",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Magihawk",
+        "Type": "Agua",
+        "NumCoremon": "02",
+        "Level": "15",
+        "Ps": "110",
+        "Dam": "80",
+        "Def": "75",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Agua-hawk",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Mojar",
+                "Type": "Agua",
+                "Power": "0"
+            },
+            {
+                "name": "Lanza Piedras",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Burbujas",
+                "Type": "Agua",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Catastasia",
+        "Type": "Fuego",
+        "NumCoremon": "03",
+        "Level": "10",
+        "Ps": "120",
+        "Dam": "85",
+        "Def": "70",
+        "Vel": "70",
+        "Atacks": [
+            {
+                "name": "Zarpa Llama",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Remolino de Llamas",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Mordisco",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Combustion",
+                "Type": "Fuego",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Dracory",
+        "Type": "Planta",
+        "NumCoremon": "04",
+        "Level": "15",
+        "Ps": "130",
+        "Dam": "65",
+        "Def": "75",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Escupitajo Matojo",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Zarpa Llama",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Colazo Liana",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Ala Rama",
+                "Type": "Planta",
+                "Power": "25"
+            }
+        ]
+    },
+    {
+        "name": "Chimpasaur",
+        "Type": "Fuego",
+        "NumCoremon": "05",
+        "Level": "10",
+        "Ps": "100",
+        "Dam": "90",
+        "Def": "60",
+        "Vel": "90",
+        "Atacks": [
+            {
+                "name": "Combustion",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Brazo Rama",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Ceniza",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Platanero",
+                "Type": "Planta",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Armadeer",
+        "Type": "Planta",
+        "NumCoremon": "06",
+        "Level": "15",
+        "Ps": "140",
+        "Dam": "70",
+        "Def": "75",
+        "Vel": "60",
+        "Atacks": [
+            {
+                "name": "Rueda Madero",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Pistola liquidillo",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Golpe Coraza",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Placa",
+                "Type": "Planta",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Leopanther",
+        "Type": "Agua",
+        "NumCoremon": "07",
+        "Level": "10",
+        "Ps": "120",
+        "Dam": "85",
+        "Def": "75",
+        "Vel": "65",
+        "Atacks": [
+            {
+                "name": "Tifonaco",
+                "Type": "Agua",
+                "Power": "25"
+            },
+            {
+                "name": "Ola Tormenta",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Mancha Solar",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Brisa Rocio",
+                "Type": "Agua",
+                "Power": "10"
+            }
+        ]
+    },
+    {
+        "name": "Pyromoth",
+        "Type": "Fuego",
+        "NumCoremon": "08",
+        "Level": "15",
+        "Ps": "100",
+        "Dam": "80",
+        "Def": "75",
+        "Vel": "90",
+        "Atacks": [
+            {
+                "name": "Mancha Solar",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Ala Rama",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Invocador de fuego",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Ascuas Sinonimo",
+                "Type": "Fuego",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Ashos",
+        "Type": "Fuego",
+        "NumCoremon": "09",
+        "Level": "10",
+        "Ps": "115",
+        "Dam": "75",
+        "Def": "70",
+        "Vel": "85",
+        "Atacks": [
+            {
+                "name": "Incinerador",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Brasa Volcan",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Velacandela",
+                "Type": "Fuego",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Vaiporver",
+        "Type": "Agua",
+        "NumCoremon": "10",
+        "Level": "15",
+        "Ps": "125",
+        "Dam": "80",
+        "Def": "60",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Vaporizador",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Lluvia Tornado",
+                "Type": "Agua",
+                "Power": "25"
+            },
+            {
+                "name": "Misil hoja",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Neblina Montaña",
+                "Type": "Agua",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Pandaisy",
+        "Type": "Planta",
+        "NumCoremon": "11",
+        "Level": "10",
+        "Ps": "115",
+        "Dam": "85",
+        "Def": "75",
+        "Vel": "70",
+        "Atacks": [
+            {
+                "name": "Corta Arboles",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Placa",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Viña",
+                "Type": "Planta",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Tsardine",
+        "Type": "Agua",
+        "NumCoremon": "12",
+        "Level": "15",
+        "Ps": "105",
+        "Dam": "90",
+        "Def": "75",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Jugoso ABC",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Bellotazo",
+                "Type": "Planta",
+                "Power": "10"
+            },
+            {
+                "name": "Ola Tormenta",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Tormenta ola",
+                "Type": "Agua",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Hyenaza",
+        "Type": "Planta",
+        "NumCoremon": "13",
+        "Level": "10",
+        "Ps": "135",
+        "Dam": "75",
+        "Def": "75",
+        "Vel": "60",
+        "Atacks": [
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Viña",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Ladron de manzanas",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Brasa",
+                "Type": "Fuego",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Remium",
+        "Type": "Agua",
+        "NumCoremon": "14",
+        "Level": "10",
+        "Ps": "125",
+        "Dam": "90",
+        "Def": "50",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Burbujas",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Humo Calentito",
+                "Type": "Fuego",
+                "Power": "10"
+            },
+            {
+                "name": "Furia del Mar",
+                "Type": "Agua",
+                "Power": "25"
+            }
+        ]
+    },
+    {
+        "name": "Ramium",
+        "Type": "Agua",
+        "NumCoremon": "15",
+        "Level": "15",
+        "Ps": "125",
+        "Dam": "70",
+        "Def": "75",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Burbujas",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Humo Calentito",
+                "Type": "Fuego",
+                "Power": "10"
+            },
+            {
+                "name": "Furia del Mar",
+                "Type": "Agua",
+                "Power": "25"
+            }
+        ]
+    },
+    {
+        "name": "Leopia",
+        "Type": "Planta",
+        "NumCoremon": "16",
+        "Level": "10",
+        "Ps": "110",
+        "Dam": "85",
+        "Def": "70",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Lanza Piedras",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Colazo Liana",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Chickette",
+        "Type": "Planta",
+        "NumCoremon": "17",
+        "Level": "15",
+        "Ps": "140",
+        "Dam": "75",
+        "Def": "55",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Patada Zarza",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Huevos de Fuego",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Enredaderas",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Viña",
+                "Type": "Planta",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Elephola",
+        "Type": "Fuego",
+        "NumCoremon": "18",
+        "Level": "10",
+        "Ps": "135",
+        "Dam": "75",
+        "Def": "75",
+        "Vel": "60",
+        "Atacks": [
+            {
+                "name": "Humo Clentito",
+                "Type": "Fuego",
+                "Power": "10"
+            },
+            {
+                "name": "Velacandela",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Trompade agua",
+                "Type": "Agua",
+                "Power": "25"
+            },
+            {
+                "name": "Mancha Solar",
+                "Type": "Fuego",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Caesardine",
+        "Type": "Fuego",
+        "NumCoremon": "19",
+        "Level": "15",
+        "Ps": "115",
+        "Dam": "90",
+        "Def": "60",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Remolino de Llamas",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Golpe Coraza",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Ascuas Sinonimo",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Incinerador",
+                "Type": "Fuego",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Ninjaroo",
+        "Type": "Planta",
+        "NumCoremon": "20",
+        "Level": "10",
+        "Ps": "100",
+        "Dam": "90",
+        "Def": "75",
+        "Vel": "80",
+        "Atacks": [
+            {
+                "name": "Ladron de manzanas",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Platanero",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Lanza Piedras",
+                "Type": "Planta",
+                "Power": "25"
+            }
+        ]
+    },
+    {
+        "name": "Crocita",
+        "Type": "Agua",
+        "NumCoremon": "21",
+        "Level": "15",
+        "Ps": "125",
+        "Dam": "80",
+        "Def": "75",
+        "Vel": "65",
+        "Atacks": [
+            {
+                "name": "Brisa Rocio",
+                "Type": "Agua",
+                "Power": "10"
+            },
+            {
+                "name": "Pistola liquidillo",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Furia del Mar",
+                "Type": "Agua",
+                "Power": "25"
+            }
+        ]
+    },
+    {
+        "name": "Venomium",
+        "Type": "Planta",
+        "NumCoremon": "22",
+        "Level": "10",
+        "Ps": "110",
+        "Dam": "85",
+        "Def": "75",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Ala Rama",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Rueda Madero",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Penguine",
+        "Type": "Agua",
+        "NumCoremon": "23",
+        "Level": "15",
+        "Ps": "120",
+        "Dam": "85",
+        "Def": "55",
+        "Vel": "85",
+        "Atacks": [
+            {
+                "name": "Burbujas",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Tormenta ola",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Vaporizador",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Chamesaur",
+        "Type": "Fuego",
+        "NumCoremon": "24",
+        "Level": "10",
+        "Ps": "130",
+        "Dam": "75",
+        "Def": "70",
+        "Vel": "70",
+        "Atacks": [
+            {
+                "name": "Incinerador",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Ascuas Sinonimo",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Combustion",
+                "Type": "Fuego",
+                "Power": "15"
+            },
+            {
+                "name": "Tormenta ola",
+                "Type": "Agua",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Octolax",
+        "Type": "Agua",
+        "NumCoremon": "25",
+        "Level": "15",
+        "Ps": "120",
+        "Dam": "90",
+        "Def": "60",
+        "Vel": "75",
+        "Atacks": [
+            {
+                "name": "Pistola liquidillo",
+                "Type": "Agua",
+                "Power": "20"
+            },
+            {
+                "name": "Misil hoja",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Colazo Liana",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Brisa Rocio",
+                "Type": "Agua",
+                "Power": "10"
+            }
+        ]
+    },
+    {
+        "name": "Leoreon",
+        "Type": "Fuego",
+        "NumCoremon": "26",
+        "Level": "10",
+        "Ps": "135",
+        "Dam": "80",
+        "Def": "70",
+        "Vel": "60",
+        "Atacks": [
+            {
+                "name": "Remolino de Llamas",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Brasa Volcan",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Colazo Liana",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Humo Calentito",
+                "Type": "Fuego",
+                "Power": "10"
+            }
+        ]
+    },
+    {
+        "name": "Dolphash",
+        "Type": "Agua",
+        "NumCoremon": "27",
+        "Level": "15",
+        "Ps": "120",
+        "Dam": "85",
+        "Def": "75",
+        "Vel": "65",
+        "Atacks": [
+            {
+                "name": "Lluvia Tornado",
+                "Type": "Agua",
+                "Power": "25"
+            },
+            {
+                "name": "Vaporizador",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Secar",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Misil hoja",
+                "Type": "Planta",
+                "Power": "20"
+            }
+        ]
+    },
+    {
+        "name": "Porcureon",
+        "Type": "Fuego",
+        "NumCoremon": "28",
+        "Level": "10",
+        "Ps": "115",
+        "Dam": "85",
+        "Def": "55",
+        "Vel": "90",
+        "Atacks": [
+            {
+                "name": "Jugoso ABC",
+                "Type": "Agua",
+                "Power": "15"
+            },
+            {
+                "name": "Huevos de Fuego",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Mancha Solar",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Combustion",
+                "Type": "Fuego",
+                "Power": "15"
+            }
+        ]
+    },
+    {
+        "name": "Carnatee",
+        "Type": "Planta",
+        "NumCoremon": "29",
+        "Level": "15",
+        "Ps": "125",
+        "Dam": "85",
+        "Def": "75",
+        "Vel": "60",
+        "Atacks": [
+            {
+                "name": "Brazo Rama",
+                "Type": "Planta",
+                "Power": "25"
+            },
+            {
+                "name": "Ataque Hoja",
+                "Type": "Planta",
+                "Power": "15"
+            },
+            {
+                "name": "Misil hoja",
+                "Type": "Planta",
+                "Power": "20"
+            },
+            {
+                "name": "Flor de Loto",
+                "Type": "Agua",
+                "Power": "10"
+            }
+        ]
+    },
+    {
+        "name": "Boneen",
+        "Type": "Fuego",
+        "NumCoremon": "30",
+        "Level": "10",
+        "Ps": "120",
+        "Dam": "70",
+        "Def": "65",
+        "Vel": "90",
+        "Atacks": [
+            {
+                "name": "Huevos de Fuego",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Incinerador",
+                "Type": "Fuego",
+                "Power": "20"
+            },
+            {
+                "name": "Brasa Volcan",
+                "Type": "Fuego",
+                "Power": "25"
+            },
+            {
+                "name": "Jugoso ABC",
+                "Type": "Agua",
+                "Power": "15"
+            }
+        ]
+    }
+]
