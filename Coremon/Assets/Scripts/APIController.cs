@@ -22,7 +22,8 @@ public class APIController : MonoBehaviour
 
         saveData.coredex[29] = 1;
         saveData.money = 300;
-
+        saveData.team[0].Atacks[0].Power = 99;
+        
         saveSaveData(saveData);
     }
 
@@ -33,6 +34,12 @@ public class APIController : MonoBehaviour
     public UserInfo loadSaveData(string user)
     {
         Task<UserInfo> task = Task.Run<UserInfo>(async () => await getSaveData(user));  //Non scalable solution. Creates new thread. Works for now.
+
+        foreach (Coremon mon in task.Result.team)
+        {
+            ReadyCoremon(mon);
+        }
+
         return task.Result;
     }
 
@@ -66,6 +73,12 @@ public class APIController : MonoBehaviour
         }                                                                 
     }
 
+    //Makes Coremon retreived from the database ready to be used in game
+    private void ReadyCoremon(Coremon mon)
+    {
+        CoremonController.setLvlUpExp(mon);
+        //mon.Ps = mon.PsMax;
+    }
     /*
     public void createSaveData()
     {
