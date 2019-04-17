@@ -44,7 +44,7 @@ public class hierbaAlta : MonoBehaviour
                 if (suerte <= probCoremon)
                 {
                     Debug.Log("Pokemon apears");
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Battle");            //Load battle scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("BattleScene");            //Load battle scene
                     //probCoremon = 5f;               //Probability of appearance is static
                 }
             }

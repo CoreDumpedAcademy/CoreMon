@@ -12,7 +12,7 @@ public class Inicio : MonoBehaviour
         Application.Quit();
     }
 
-    public void Start()
+    public void Play()
     {
         SceneManager.LoadScene("Game");
     }
