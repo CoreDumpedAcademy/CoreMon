@@ -13,14 +13,14 @@ public class PauseMenuController : MonoBehaviour
 
     public float waitTime = 1f;
 
-    void Start()
+    void Awake()
     {
         //Get the pointer master script from the PointerMaster child object
         pointer = transform.Find("PausePointerMaster").gameObject.GetComponent<PausePointerMaster>();
-        updateOption(PauseController.pauseMenuOptions.Equipo);
+        currOption = PauseController.pauseMenuOptions.Equipo;
     }
 
-    private void OnEnable()
+    private void OnDisable()
     {
         updateOption(PauseController.pauseMenuOptions.Equipo);
     }
@@ -56,6 +56,8 @@ public class PauseMenuController : MonoBehaviour
     public PauseController.pauseMenuOptions getActions()
     {
         keyInput = getInput();
+
+        Debug.Log(keyInput);
 
         //If input was detected Check where to move or return option selected
 
@@ -103,6 +105,9 @@ public class PauseMenuController : MonoBehaviour
                         keyInput = menuInput.No;
                         return currOption;
                     }
+                    break;
+                default:
+                    updateOption(PauseController.pauseMenuOptions.Equipo);
                     break;
             }
             keyInput = menuInput.None;
