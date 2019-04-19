@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     BattleController.menuOptions currOption = BattleController.menuOptions.Atacar;
     menuInput keyInput = menuInput.None;
 
+
     void Start()
     {
         //Get the pointer master script from the PointerMaster child object
@@ -47,7 +48,6 @@ public class MenuController : MonoBehaviour
 
         if (keyInput != menuInput.None)
         {
-
             switch (currOption)
             {
                 case BattleController.menuOptions.Atacar:
@@ -108,5 +108,6 @@ public class MenuController : MonoBehaviour
         pointer.selectOption(option);
         currOption = option;
     }
+
     enum menuInput { None, Right, Left, Up, Down, Yes, No }
 }
