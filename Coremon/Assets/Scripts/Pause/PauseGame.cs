@@ -8,8 +8,6 @@ public class PauseGame : MonoBehaviour
     Movement moveScript;      //reference to movement script
     GameObject pauseCanvas;   //reference to pause menu canvas starts inactive
 
-    bool paused = false;    
-
     void OnEnable()
     {
         moveScript = GetComponent<Movement>();

@@ -45,7 +45,7 @@ public class PauseMenuController : MonoBehaviour
         {
             input = menuInput.Up;
         }
-        else if (Input.GetButtonDown("Submit"))
+        else if (Input.GetButton("Submit"))
         {
             input = menuInput.Yes;
         }
