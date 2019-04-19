@@ -10,9 +10,6 @@ public class PauseController : MonoBehaviour
     TeamMenu teamMenu;
     BagMenu bagMenu;
 
-    float inputWaitTime = 0.2f;
-    float counter = 0f;
-
     bool active = true; //Tells is the main menu is active or showing a sub window
 
     void Start()
@@ -27,18 +24,13 @@ public class PauseController : MonoBehaviour
     {
         if (active)    //If no sub-window is open
         {
-            counter += Time.deltaTime;
-            if (counter >= inputWaitTime)
+            Debug.Log("take action");
+            action = menu.getActions();
+            if (action != pauseMenuOptions.None)
             {
-                counter = 0;
-                Debug.Log("take action");
-                action = menu.getActions();
-                if (action != pauseMenuOptions.None)
-                {
-                    active = false;
+                active = false;
 
-                    takeAction(action);
-                }
+                takeAction(action);
             }
         }
         else

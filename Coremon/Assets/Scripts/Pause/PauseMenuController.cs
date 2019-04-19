@@ -11,7 +11,9 @@ public class PauseMenuController : MonoBehaviour
     PauseController.pauseMenuOptions currOption;
     menuInput keyInput = menuInput.None;
 
-    public float waitTime = 1f;
+    float inputWaitTime = 0.3f;         //Every time an input diferent from none                                        
+    float counter = 0f;                 //is detected, wait time is activated. In wait
+    bool waitTimeActive = false;        //time input is not processed for easier navigation
 
     void Awake()
     {
@@ -28,28 +30,46 @@ public class PauseMenuController : MonoBehaviour
     public menuInput getInput()
     {
         menuInput input = menuInput.None;
-        //Get the input and store it in menuInput
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            input = menuInput.Left;
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            input = menuInput.Right;
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            input = menuInput.Down;
-        }
-        else if (Input.GetAxis("Vertical") > 0)
-        {
-            input = menuInput.Up;
-        }
-        else if (Input.GetButton("Submit"))
-        {
-            input = menuInput.Yes;
-        }
 
+        if (waitTimeActive)
+        {
+            counter += Time.deltaTime;
+            if (counter >= inputWaitTime)
+            {
+                waitTimeActive = false;
+                counter = 0;
+            }
+        }
+        else
+        {
+            //Get the input and store it in menuInput if not waiting
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                input = menuInput.Left;
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                input = menuInput.Right;
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                input = menuInput.Down;
+            }
+            else if (Input.GetAxis("Vertical") > 0)
+            {
+                input = menuInput.Up;
+            }
+            else if (Input.GetButton("Submit"))
+            {
+                input = menuInput.Yes;
+            }
+
+            //if input was detected start wait time
+            if(input != menuInput.None)
+            {
+                waitTimeActive = true;
+            }
+        }
         return input;
     }
 
