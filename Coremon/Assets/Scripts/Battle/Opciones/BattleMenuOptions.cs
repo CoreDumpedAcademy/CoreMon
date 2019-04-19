@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,31 +7,31 @@ using UnityEngine.SceneManagement;
 public class BattleMenuOptions : MonoBehaviour
 {
     public static void opciones(BattleController.menuOptions action)
-    {    
-        if (action == BattleController.menuOptions.Atacar)
+    {
+        switch (action)
         {
-           Atack.atacando=true;
-        }
-        else if (action == BattleController.menuOptions.Cambiar)
-        {
-            //script cambio pokemon
-        }
-        else if (action == BattleController.menuOptions.Capturar)
-        {
-            if (Capture.capturar())
-            {
-                Capture.n = 1;
-                //SceneManager.LoadScene("Game");
-            }
-            else
-            {
-                Capture.n++;
-            }
-            Debug.Log(Capture.n);
-        }
-        else if (action == BattleController.menuOptions.Huir)
-        {
-            //SceneManager.LoadScene("Game");
+            case BattleController.menuOptions.Atacar:
+                Atack.atacando = true;
+                break;
+            case BattleController.menuOptions.Cambiar:
+                break;
+            case BattleController.menuOptions.Capturar:
+                if (Capture.capturar())
+                {
+                    Capture.n = 1;
+                    //SceneManager.LoadScene("Game");
+                }
+                else
+                {
+                    Capture.n++;
+                }
+                Debug.Log(Capture.n);
+
+                break;
+            case BattleController.menuOptions.Huir:
+                SceneController.loadOverworld();
+                break;
         }
     }
 }
+

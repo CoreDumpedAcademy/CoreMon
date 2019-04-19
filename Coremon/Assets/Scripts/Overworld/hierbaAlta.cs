@@ -19,12 +19,13 @@ public class hierbaAlta : MonoBehaviour
         map = GameObject.Find("map");                                            //Retreive scene map
         collTileMap = map.transform.Find("grass").GetComponent<Tilemap>();       //Retrieve grass tilemap
         grid = collTileMap.layoutGrid;                                           //Grid the grass tilemap uses 
+        gridPos = grid.WorldToCell(transform.position);
     }
 
 
-    private void OnTriggerStay2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
+
 
         if (other.gameObject.tag == "hierba")
         {
@@ -32,19 +33,17 @@ public class hierbaAlta : MonoBehaviour
 
             newGridPos = grid.WorldToCell(transform.position);
 
-            if(gridPos != newGridPos)                     //If postion in grid is different from before
+            if (gridPos != newGridPos)                     //If postion in grid is different from before
             {
 
                 gridPos = newGridPos;
-                //Debug.Log("OtherTile");
-                
-                //Apperance probability
-                suerte = Mathf.Round(Random.Range(0f, 100f));  
 
+                //Apperance probability
+                suerte = Mathf.Round(Random.Range(0f, 100f));
                 if (suerte <= probCoremon)
                 {
                     Debug.Log("Pokemon apears");
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("BattleScene");            //Load battle scene
+                    SceneController.loadBattle();            //Load battle scene
                     //probCoremon = 5f;               //Probability of appearance is static
                 }
             }
@@ -56,3 +55,5 @@ public class hierbaAlta : MonoBehaviour
     }
 
 }
+
+

@@ -12,8 +12,8 @@ public class Inicio : MonoBehaviour
         Application.Quit();
     }
 
-    public void Play()
+    public void loadGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneController.startGame();
     }
 }
