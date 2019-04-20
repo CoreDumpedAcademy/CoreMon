@@ -11,12 +11,20 @@ public class Atack : MonoBehaviour
     public GameObject pointerAtackUI;
     public GameObject masterPointerUI;
 
+    public Coremon cor;
+    public Coremon enemyCor;
+
     private void Start()
     {
         pointerAtackUI.SetActive(false);
         atacando = false;
         selecAtac = false;
         masterPointerUI.SetActive(true);
+
+        //Get  coremons
+        cor = GameData.saveData.team[0];
+        //enemyCor =  getWildCoremon();        //Esto luego
+        enemyCor = new Coremon();
     }
 
     private void Update()
