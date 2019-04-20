@@ -7,6 +7,10 @@ public class TeamController : MonoBehaviour
     int[] optionsAvailable = new int[2];   //Maps which Coremon will be shown in each option slots using their index in SaveData
     int currOption = 1;
     menuInput input;
+
+    GameObject textOp1;
+    GameObject textOp2;
+
     BattleController battleController;
     GameObject menu;
     Atack atackScript;    //Reference to Atack script, which contains the coremon currently in battle
@@ -14,6 +18,9 @@ public class TeamController : MonoBehaviour
     TeamPointerMaster pointer;
     void Start()
     {
+        textOp1 = transform.Find("Option1").gameObject;
+        textOp2 = transform.Find("Option2").gameObject;
+
         pointer = transform.Find("TeamPointerMaster").gameObject.GetComponent<TeamPointerMaster>();
         battleController = GameObject.Find("BattleController").GetComponent<BattleController>();
         atackScript = GameObject.Find("Batalla").GetComponent<Atack>();
@@ -84,6 +91,9 @@ public class TeamController : MonoBehaviour
     {
         optionsAvailable[0] = 1;          //Battle starts with coremon at index 0 out, so available options are Coremon
         optionsAvailable[1] = 2;          //At indexes 1 and 2
+
+        //set text
+        updateText();
     }
 
     void selectOption(int index)
@@ -121,6 +131,8 @@ public class TeamController : MonoBehaviour
         //Save indexes
         optionsAvailable[0] = op1;
         optionsAvailable[1] = op2;
+
+        updateText();
     }
 
     void updateCoremon(int selectedOption)
@@ -128,6 +140,12 @@ public class TeamController : MonoBehaviour
         selectedOption = optionsAvailable[selectedOption - 1];  //convert selected option to its corresponding Coremon index
         Debug.Log(selectedOption);
         atackScript.cor = GameData.saveData.team[selectedOption];
+    }
+
+    void updateText()
+    {
+        textOp1.GetComponent<UnityEngine.UI.Text>().text = GameData.saveData.team[optionsAvailable[0]].name;
+        textOp2.GetComponent<UnityEngine.UI.Text>().text = GameData.saveData.team[optionsAvailable[1]].name;
     }
     enum menuInput
     {
