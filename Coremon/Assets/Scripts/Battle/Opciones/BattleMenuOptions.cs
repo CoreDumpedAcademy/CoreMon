@@ -10,7 +10,7 @@ public class BattleMenuOptions : MonoBehaviour
 
     private void Start()
     {
-        teamMenu = GameObject.Find("TeamCanvas").transform.Find("TeamMenu").gameObject;
+        teamMenu = GameObject.Find("CoremonCanvas").transform.Find("TeamMenu").gameObject;
     }
     public void actOn(BattleController.menuOptions action)
     {
