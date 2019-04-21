@@ -295,56 +295,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5513403217635874032, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482582, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482582, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482582, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482581, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482581, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403217156482581, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403216647413455, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403216647413455, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5513403216647413455, guid: 10c64232354eeac498f4022820090823,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10c64232354eeac498f4022820090823, type: 3}
 --- !u!1 &1679390127
