@@ -6,18 +6,18 @@ public class AtackMenu : MonoBehaviour
 {
     menuOptions action = menuOptions.None;     //Action the Battle controller will do next
     AtackController menu;                       //Menu controller has all the functions that controll the menu
-    public Coremon cor;
-    public Coremon enemyCor;
+    Atack atackScript;
     private void Start()
     {
         menu = gameObject.GetComponent<AtackController>();     //Initializing menu controller script
+        atackScript = transform.parent.gameObject.GetComponent<Atack>();
     }
     void Update()
     {
         if (action != menuOptions.None)//execute the action by activating and deactivating the UIs
         {
             Atack.atacando = true;
-            Atack.atack(action, cor, enemyCor);
+            Atack.atack(action, atackScript.enemyCor, atackScript.cor);
             action = menuOptions.None;
         }
         if (Atack.atacando)

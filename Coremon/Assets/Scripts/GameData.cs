@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour
+public static class GameData
 {
     //Class that stores in memory persistent game information
     //using static fields
