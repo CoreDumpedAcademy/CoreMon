@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class BattleMenuOptions : MonoBehaviour
 {
-    BattleController controllerScript;
     GameObject teamMenu;
 
     private void Start()
     {
-        controllerScript = gameObject.GetComponent<BattleController>();
         teamMenu = GameObject.Find("TeamCanvas").transform.Find("TeamMenu").gameObject;
     }
     public void actOn(BattleController.menuOptions action)
@@ -19,19 +17,19 @@ public class BattleMenuOptions : MonoBehaviour
         switch (action)
         {
             case BattleController.menuOptions.Atacar:
-                controllerScript.active = false;
+                BattleController.active = false;
                 Atack.atacando = true;
                 break;
             case BattleController.menuOptions.Cambiar:
-                controllerScript.active = false;
-                Debug.Log(controllerScript.active);
+                BattleController.active = false;
+                Debug.Log(BattleController.active);
                 teamMenu.SetActive(true);
                 break;
             case BattleController.menuOptions.Capturar:
                 if (Capture.capturar())
                 {
                     Capture.n = 1;
-                    //SceneManager.LoadScene("Game");
+                    SceneController.loadOverworld();
                 }
                 else
                 {

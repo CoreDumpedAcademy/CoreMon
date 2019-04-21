@@ -11,7 +11,6 @@ public class TeamController : MonoBehaviour
     GameObject textOp1;
     GameObject textOp2;
 
-    BattleController battleController;
     GameObject menu;
     Atack atackScript;    //Reference to Atack script, which contains the coremon currently in battle
 
@@ -22,7 +21,6 @@ public class TeamController : MonoBehaviour
         textOp2 = transform.Find("Option2").gameObject;
 
         pointer = transform.Find("TeamPointerMaster").gameObject.GetComponent<TeamPointerMaster>();
-        battleController = GameObject.Find("BattleController").GetComponent<BattleController>();
         atackScript = GameObject.Find("Batalla").GetComponent<Atack>();
 
         menu = gameObject;
@@ -46,7 +44,7 @@ public class TeamController : MonoBehaviour
                     if (currOption == 1) selectOption(2);
                     break;
                 case menuInput.Yes:
-                    battleController.active = true;
+                    BattleController.active = true;
 
                     updateCoremon(currOption);
                     updateOptions(currOption);
@@ -55,7 +53,7 @@ public class TeamController : MonoBehaviour
                     //change Coremon
                     break;
                 case menuInput.No:
-                    battleController.active = true;
+                    BattleController.active = true;
                     menu.SetActive(false);
                     //Go back
                     break;

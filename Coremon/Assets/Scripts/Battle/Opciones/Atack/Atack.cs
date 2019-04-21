@@ -10,6 +10,8 @@ public class Atack : MonoBehaviour
     public bool selecAtac;
     public GameObject pointerAtackUI;
     public GameObject masterPointerUI;
+    BattleController controllerScript;
+
 
     public Coremon cor;
     public Coremon enemyCor;
@@ -39,6 +41,7 @@ public class Atack : MonoBehaviour
             selecAtac = false;
             pointerAtackUI.SetActive(false);
             masterPointerUI.SetActive(true);
+            BattleController.active = true;
             Debug.Log("marmota");
         }
     }

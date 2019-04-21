@@ -7,7 +7,7 @@ public class BattleController : MonoBehaviour
     menuOptions action = menuOptions.None;     //Action the Battle controller will do next
     MenuController menu;                       //Menu controller has all the functions that controll the menu
     BattleMenuOptions options;
-    public bool active;
+    public static bool active;
 
     private void Start()
     {
