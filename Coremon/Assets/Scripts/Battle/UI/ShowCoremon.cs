@@ -14,7 +14,9 @@ public class ShowCoremon : MonoBehaviour
     GameObject enemyCor;
 
     GameObject corUI;
+    CoremonUI corUIInfo;
     GameObject enemyCorUI;
+    CoremonUI enemtCorUIInfo;
 
     private void Awake()
     {
@@ -24,8 +26,11 @@ public class ShowCoremon : MonoBehaviour
 
         cor = transform.GetChild(0).gameObject;
         enemyCor = transform.GetChild(1).gameObject;
-        //corUI = transform.GetChild(2).gameObject;
-        //enemyCorUI = transform.GetChild(3).gameObject;
+        corUI = transform.GetChild(2).gameObject;
+        enemyCorUI = transform.GetChild(3).gameObject;
+
+        corUIInfo = corUI.GetComponent<CoremonUI>();
+        enemtCorUIInfo = enemyCorUI.GetComponent<CoremonUI>();
 
         corScale = cor.GetComponent<RectTransform>().localScale;
         corScale = new Vector3(corScale.x * -1, corScale.y, corScale.z);
@@ -37,5 +42,8 @@ public class ShowCoremon : MonoBehaviour
     {
         cor.GetComponent<Image>().sprite = atackScript.cor.sprite;
         enemyCor.GetComponent<Image>().sprite = atackScript.enemyCor.sprite;
+
+        corUIInfo.updateText(atackScript.cor);
+        enemtCorUIInfo.updateText(atackScript.enemyCor);
     }
 }
