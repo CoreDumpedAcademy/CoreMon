@@ -29,16 +29,19 @@ public class GenerateTestData : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            GameData.saveData.team[i] = new Coremon();
-            GameData.saveData.team[i].sprite = controller.getCoremonSprite(GameData.saveData.team[i]);
+            GameData.saveData.team[i] = new Coremon();           
         }
 
         GameData.saveData.team[0].name = "Fushigidatesto";
         GameData.saveData.team[1].name = "Testardon";
         GameData.saveData.team[1].NumCoremon = 2;
         GameData.saveData.team[2].name = "El que queda";
-        GameData.saveData.team[2].NumCoremon = 3;
+        GameData.saveData.team[2].NumCoremon = 20;
 
+        for(int i = 0; i < 3; i++)
+        {
+            GameData.saveData.team[i].sprite = controller.getCoremonSprite(GameData.saveData.team[i]);
+        }
 
         GameData.saveData.username = "TestData";
         GameData.saveData.money = 100;

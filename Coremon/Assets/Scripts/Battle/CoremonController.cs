@@ -102,10 +102,21 @@ public class CoremonController : MonoBehaviour
 
     public Sprite getCoremonSprite(Coremon cor)
     {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("SpriteCoremon/01-spritesheet");
-        Debug.Log(sprites[0].name);
+        string index;
+        if(cor.NumCoremon < 10 && cor.NumCoremon > 0)
+        {
+            index = "0" + cor.NumCoremon.ToString();
+        }
+        else
+        {
+            index = cor.NumCoremon.ToString();
+        }
 
-        return sprites[0];
+        Debug.Log(index);
+        Sprite sprite = Resources.Load<Sprite>(@"Sprite Coremon\" + index);
+        Debug.Log(sprite);
+
+        return sprite;
     }
 
      /* Function to apply the exp reward dropped by an enemy */
@@ -165,7 +176,7 @@ public class Coremon
     public Coremon(){
         this.name = "test";
         this.Type = "Planta";
-        this.NumCoremon = 0;
+        this.NumCoremon = 1;
         this.Level = 1;
         this.ExpPoints = 0;
         CoremonController.setLvlUpExp(this);
