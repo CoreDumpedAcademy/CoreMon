@@ -14,7 +14,7 @@ public class GenerateTestData : MonoBehaviour
         GameData.saveData = new UserInfo();
         GameData.saveData.team = new Coremon[3];
         GameData.saveData.coredex = new int[30];
-        GameData.saveData.bag = new Item[10];
+        GameData.saveData.bag = new Item[5];
         for(int i = 0; i < 30; i++)
         {
             GameData.saveData.coredex[i] = 0;
