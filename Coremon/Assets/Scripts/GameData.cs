@@ -11,6 +11,8 @@ public static class GameData
 
     public static UserInfo saveData;
 
+    public static Coremon[] CoremonData;
+
     public static GameObject player;
     public static Vector3Int playerPos;       //Player position before entering battle
 }

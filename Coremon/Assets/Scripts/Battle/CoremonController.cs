@@ -79,7 +79,7 @@ public class CoremonController : MonoBehaviour
     }
 
     //Function to set the lvlUpExp property to coremon read from database
-    public static void setLvlUpExp(Coremon mon)
+    public void setLvlUpExp(Coremon mon)
     {
         int ExpGauge = -1;  //Default for invalid level
 
@@ -99,6 +99,11 @@ public class CoremonController : MonoBehaviour
     /*
     *   Leveling up functions. End
     */
+
+    public Coremon getCoremonNum()
+    {
+        return new Coremon();
+    }
 
     public Sprite getCoremonSprite(Coremon cor)
     {
@@ -179,7 +184,7 @@ public class Coremon
         this.NumCoremon = 1;
         this.Level = 1;
         this.ExpPoints = 0;
-        CoremonController.setLvlUpExp(this);
+        //CoremonController.setLvlUpExp(this);
         this.PsMax = 1;
         this.Ps = 1;
         this.Dam = 1;
