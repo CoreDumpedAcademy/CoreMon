@@ -77,8 +77,16 @@ public class APIController : MonoBehaviour
     private void ReadyCoremon(Coremon mon)
     {
         CoremonController.setLvlUpExp(mon);
-        //mon.Ps = mon.PsMax;
+        mon.Ps = mon.PsMax;
     }
+    /*
+    public void setCoremonSprite(Coremon cor)
+    {
+        //Test
+        UnityEngine.Object[] Sprite = Resources.LoadAll("SpriteCoremon\01-spritesheet");
+        Debug.Log(Sprite);
+    }
+    */
     /*
     public void createSaveData()
     {
