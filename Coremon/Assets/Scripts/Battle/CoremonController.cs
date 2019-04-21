@@ -100,7 +100,14 @@ public class CoremonController : MonoBehaviour
     *   Leveling up functions. End
     */
 
-  
+    public Sprite getCoremonSprite(Coremon cor)
+    {
+        Sprite[] sprites = Resources.LoadAll<Sprite>("SpriteCoremon/01-spritesheet");
+        Debug.Log(sprites[0].name);
+
+        return sprites[0];
+    }
+
      /* Function to apply the exp reward dropped by an enemy */
     public void applyExpRewardExp(Coremon mon, Coremon enemy)
     {
@@ -141,6 +148,7 @@ public class CoremonController : MonoBehaviour
 public class Coremon
 {
     public string name;
+    public Sprite sprite;
     public string Type;
     public int NumCoremon;
     public int Level;

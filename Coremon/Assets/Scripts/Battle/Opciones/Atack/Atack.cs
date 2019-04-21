@@ -10,8 +10,9 @@ public class Atack : MonoBehaviour
     public bool selecAtac;
     public GameObject pointerAtackUI;
     public GameObject masterPointerUI;
-    BattleController controllerScript;
 
+    BattleController controllerScript;
+    CoremonController controllerCoremon;
 
     public Coremon cor;
     public Coremon enemyCor;
@@ -22,11 +23,14 @@ public class Atack : MonoBehaviour
         atacando = false;
         selecAtac = false;
         masterPointerUI.SetActive(true);
+        controllerCoremon = gameObject.GetComponent<CoremonController>();
 
         //Get  coremons
         cor = GameData.saveData.team[0];
         //enemyCor =  getWildCoremon();        //Esto luego
         enemyCor = new Coremon();
+        enemyCor.sprite = controllerCoremon.getCoremonSprite(enemyCor);
+
     }
 
     private void Update()
