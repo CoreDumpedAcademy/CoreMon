@@ -30,13 +30,13 @@ public class AtackPointer : MonoBehaviour
                 currPointer = At1;
                 break;
             case AtackMenu.menuOptions.At3:
-                currPointer = At2;
-                break;
-            case AtackMenu.menuOptions.At4:
                 currPointer = At3;
                 break;
-            case AtackMenu.menuOptions.At2:
+            case AtackMenu.menuOptions.At4:
                 currPointer = At4;
+                break;
+            case AtackMenu.menuOptions.At2:
+                currPointer = At2;
                 break;
         }
         currPointer.SetActive(true);
