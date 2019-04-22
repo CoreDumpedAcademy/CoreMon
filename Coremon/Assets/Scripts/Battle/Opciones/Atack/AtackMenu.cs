@@ -31,7 +31,7 @@ public class AtackMenu : MonoBehaviour
             Atack.atack(action, atackScript.enemyCor, atackScript.cor);
             action = menuOptions.None;
         }
-        Debug.Log("contador: " + contador);
+
         if (atackScript.enemyCor.Ps <= 0 && contador <= 4)
         {
             end1.SetActive(true);
