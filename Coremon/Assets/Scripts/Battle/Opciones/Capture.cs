@@ -45,12 +45,14 @@ public class Capture : MonoBehaviour
         }
         if(cont > 3 && capture == 1)
         {
+            BattleController.active = true;
             capture = 0;
             cont = 0;
             SceneController.loadOverworld();
         }
         if (cont > 3 && capture == 2)
         {
+            BattleController.active = true;
             capture = 0;
             cont = 0;
             escapaUI.SetActive(false);

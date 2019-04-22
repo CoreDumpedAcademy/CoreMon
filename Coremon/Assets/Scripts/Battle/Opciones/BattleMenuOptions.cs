@@ -27,6 +27,7 @@ public class BattleMenuOptions : MonoBehaviour
                 break;
 
             case BattleController.menuOptions.Capturar:
+                BattleController.active = false;
                 Capture.capturar();                
                 Debug.Log(Capture.n);
                 break;
