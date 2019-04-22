@@ -67,6 +67,8 @@ public class APIController : MonoBehaviour
         byte[] data = Encoding.ASCII.GetBytes(json);
         Uri uri = new Uri(string.Format("http://localhost:3000/users/username&{0}", update.username));
 
+        Debug.Log(json);
+
         using(var client = new System.Net.WebClient())
         {
             client.Headers.Add("Content-Type", "application/json");
