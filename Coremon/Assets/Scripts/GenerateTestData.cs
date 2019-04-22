@@ -7,7 +7,7 @@ public class GenerateTestData : MonoBehaviour
     CoremonController controller;
     Coremon[] savedTeam = new Coremon[3];
     UserInfo savedData;
-    void Start()
+    public void generateData()
     {
         controller = gameObject.GetComponent<CoremonController>();
 

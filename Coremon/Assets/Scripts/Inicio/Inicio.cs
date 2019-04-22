@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Inicio : MonoBehaviour
 {
+    GenerateTestData testData;
+
+    private void Start()
+    {
+        testData = gameObject.GetComponent<GenerateTestData>();
+    }
     public void quit()
     {
         Debug.Log("Quitt");
@@ -14,6 +20,7 @@ public class Inicio : MonoBehaviour
 
     public void loadGame()
     {
+        testData.generateData();
         SceneController.startGame();
     }
 }
