@@ -48,7 +48,7 @@ public class GenerateTestData : MonoBehaviour
 
     private void Update()
     {
-        savedTeam = GameData.saveData.team;
+        //savedTeam = GameData.saveData.team;
         savedData = GameData.saveData;
     }
 
