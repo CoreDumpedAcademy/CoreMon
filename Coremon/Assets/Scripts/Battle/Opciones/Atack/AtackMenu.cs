@@ -34,18 +34,20 @@ public class AtackMenu : MonoBehaviour
 
         if (atackScript.enemyCor.Ps <= 0 && contador <= 4)
         {
+            BattleController.active = false;
             end1.SetActive(true);
             contador += Time.deltaTime;
         }
         if (atackScript.cor.Ps <= 0 && contador <= 4)
         {
+            BattleController.active = false;
             //falta cambiar el pokemon y que te ataquen
             end2.SetActive(true);
             contador += Time.deltaTime;
         }
         if (contador > 4)
         {
-            Debug.Log("maaarmotaMediterranea");
+            //Debug.Log("maaarmotaMediterranea");
             controllerCoremon.applyExpRewardExp(atackScript.cor, atackScript.enemyCor);
             SceneController.loadOverworld();
         }
