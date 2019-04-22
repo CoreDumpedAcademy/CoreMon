@@ -83,6 +83,7 @@ public class Atack : MonoBehaviour
         if (action == AtackMenu.menuOptions.At1)
         {
             cor.Ps -= cor2.Atacks[0].Power * cor2.Dam * typeMult / cor.Def / typeDiv;
+            Debug.Log(cor2.Atacks[0].name);
         }
         else if (action == AtackMenu.menuOptions.At2)
         {
@@ -97,6 +98,5 @@ public class Atack : MonoBehaviour
             cor.Ps -= cor2.Atacks[3].Power * cor2.Dam * typeMult / cor.Def / typeDiv;
         }
         atacando = false;
-        Debug.Log("marmota2");
     }
 }
