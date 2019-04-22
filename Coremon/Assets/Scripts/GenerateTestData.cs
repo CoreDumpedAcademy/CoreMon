@@ -7,7 +7,7 @@ public class GenerateTestData : MonoBehaviour
     CoremonController controller;
     Coremon[] savedTeam = new Coremon[3];
     UserInfo savedData;
-    void Start()
+    public void generateData()
     {
         controller = gameObject.GetComponent<CoremonController>();
 
@@ -27,18 +27,9 @@ public class GenerateTestData : MonoBehaviour
         GameData.saveData.coredex[15] = 1;
         GameData.saveData.coredex[29] = 1;
 
-        for (int i = 0; i < 3; i++)
-        {
-            GameData.saveData.team[i] = new Coremon();
-            GameData.saveData.team[i].sprite = controller.getCoremonSprite(GameData.saveData.team[i]);
-        }
-
-        GameData.saveData.team[0].name = "Fushigidatesto";
-        GameData.saveData.team[1].name = "Testardon";
-        GameData.saveData.team[1].NumCoremon = 2;
-        GameData.saveData.team[2].name = "El que queda";
-        GameData.saveData.team[2].NumCoremon = 3;
-
+        GameData.saveData.team[0] = controller.getCoremonNum(1);
+        GameData.saveData.team[1] = controller.getCoremonNum(5);
+        GameData.saveData.team[2] = controller.getCoremonNum(20);
 
         GameData.saveData.username = "TestData";
         GameData.saveData.money = 100;
@@ -57,7 +48,7 @@ public class GenerateTestData : MonoBehaviour
 
     private void Update()
     {
-        savedTeam = GameData.saveData.team;
+        //savedTeam = GameData.saveData.team;
         savedData = GameData.saveData;
     }
 

@@ -11,11 +11,12 @@ public class APIController : MonoBehaviour
 {
 
     public UserInfo saveData;
-
+    CoremonController corController;
     //FOR TESTING
 
     private void Start()
     {
+        corController = gameObject.GetComponent<CoremonController>();
         string user = "nyan3";
 
         saveData = loadSaveData(user);
@@ -76,17 +77,12 @@ public class APIController : MonoBehaviour
     //Makes Coremon retreived from the database ready to be used in game
     private void ReadyCoremon(Coremon mon)
     {
-        CoremonController.setLvlUpExp(mon);
+        corController.setLvlUpExp(mon);
+        mon.sprite = corController.getCoremonSprite(mon);
         mon.Ps = mon.PsMax;
+
     }
-    /*
-    public void setCoremonSprite(Coremon cor)
-    {
-        //Test
-        UnityEngine.Object[] Sprite = Resources.LoadAll("SpriteCoremon\01-spritesheet");
-        Debug.Log(Sprite);
-    }
-    */
+
     /*
     public void createSaveData()
     {

@@ -79,7 +79,7 @@ public class CoremonController : MonoBehaviour
     }
 
     //Function to set the lvlUpExp property to coremon read from database
-    public static void setLvlUpExp(Coremon mon)
+    public void setLvlUpExp(Coremon mon)
     {
         int ExpGauge = -1;  //Default for invalid level
 
@@ -99,16 +99,47 @@ public class CoremonController : MonoBehaviour
     /*
     *   Leveling up functions. End
     */
-
     public Sprite getCoremonSprite(Coremon cor)
     {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("SpriteCoremon/01-spritesheet");
-        Debug.Log(sprites[0].name);
+        string index;
+        if(cor.NumCoremon < 10 && cor.NumCoremon > 0)
+        {
+            index = "0" + cor.NumCoremon.ToString();
+        }
+        else
+        {
+            index = cor.NumCoremon.ToString();
+        }
 
-        return sprites[0];
+        Debug.Log(index);
+        Sprite sprite = Resources.Load<Sprite>(@"Sprite Coremon\" + index);
+        Debug.Log(sprite);
+
+        return sprite;
+    }
+    
+    //Getsa coremon from the data base using its index
+    public Coremon getCoremonNum(int num)
+    {
+        Coremon cor = null;
+        if (num >= 0 && num < 30)
+        {
+            cor = GameData.CoremonData[num - 1];
+            cor.Ps = cor.PsMax;
+            setLvlUpExp(cor);
+            cor.sprite = getCoremonSprite(cor);
+        }
+        return cor;
     }
 
-     /* Function to apply the exp reward dropped by an enemy */
+
+    public Coremon getWildCoremon()
+    {
+        int index = UnityEngine.Random.Range(0, 30);
+        return getCoremonNum(index);
+    }
+
+    /* Function to apply the exp reward dropped by an enemy */
     public void applyExpRewardExp(Coremon mon, Coremon enemy)
     {
         if (mon.Level < maxLvl) //skip if its called for a mon at max level
@@ -165,10 +196,10 @@ public class Coremon
     public Coremon(){
         this.name = "test";
         this.Type = "Planta";
-        this.NumCoremon = 0;
+        this.NumCoremon = 1;
         this.Level = 1;
         this.ExpPoints = 0;
-        CoremonController.setLvlUpExp(this);
+        //CoremonController.setLvlUpExp(this);
         this.PsMax = 1;
         this.Ps = 1;
         this.Dam = 1;

@@ -27,9 +27,8 @@ public class Atack : MonoBehaviour
 
         //Get  coremons
         cor = GameData.saveData.team[0];
-        //enemyCor =  getWildCoremon();        //Esto luego
-        enemyCor = new Coremon();
-        enemyCor.sprite = controllerCoremon.getCoremonSprite(enemyCor);
+        enemyCor =  controllerCoremon.getWildCoremon();   
+        
 
     }
 
