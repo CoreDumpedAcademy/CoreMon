@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseController : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PauseController : MonoBehaviour
     TeamMenu teamMenu;
     BagMenu bagMenu;
 
+    Text usernameText;
+    Text moneyText;
+    Text coredexText;
+
     bool active = true; //Tells is the main menu is active or showing a sub window
 
     void Start()
@@ -19,6 +24,12 @@ public class PauseController : MonoBehaviour
         teamMenu = transform.Find("TeamMenu").GetComponent<TeamMenu>();
         bagMenu = transform.Find("BagMenu").GetComponent<BagMenu>();
         ApiController = gameObject.GetComponent<APIController>();
+
+        usernameText = transform.Find("Username").GetComponent<Text>();
+        moneyText = transform.Find("Money").GetComponent<Text>();
+        coredexText = transform.Find("Coredex").GetComponent<Text>();
+
+        usernameText.text = GameData.saveData.username;
     }
 
 
@@ -47,6 +58,9 @@ public class PauseController : MonoBehaviour
                 }
             }
         }
+
+        moneyText.text = GameData.saveData.money.ToString();
+        coredexText.text = "10/30";
     }
 
     void takeAction(pauseMenuOptions option)
