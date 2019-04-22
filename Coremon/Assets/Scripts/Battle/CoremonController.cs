@@ -100,9 +100,17 @@ public class CoremonController : MonoBehaviour
     *   Leveling up functions. End
     */
 
-    public Coremon getCoremonNum()
+    public Coremon getCoremonNum(int num)
     {
-        return new Coremon();
+        Coremon cor = null;
+        if(num >= 0 && num < 30)
+        {
+            cor = GameData.CoremonData[num - 1];
+            cor.Ps = cor.PsMax;
+            setLvlUpExp(cor);
+            cor.sprite = getCoremonSprite(cor);
+        }
+        return cor;
     }
 
     public Sprite getCoremonSprite(Coremon cor)
