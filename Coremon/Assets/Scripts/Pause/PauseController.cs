@@ -6,6 +6,7 @@ public class PauseController : MonoBehaviour
 {
     pauseMenuOptions action = pauseMenuOptions.None;
     PauseMenuController menu;
+    APIController ApiController;
 
     TeamMenu teamMenu;
     BagMenu bagMenu;
@@ -17,6 +18,7 @@ public class PauseController : MonoBehaviour
         menu = GetComponent<PauseMenuController>();
         teamMenu = transform.Find("TeamMenu").GetComponent<TeamMenu>();
         bagMenu = transform.Find("BagMenu").GetComponent<BagMenu>();
+        ApiController = gameObject.GetComponent<APIController>();
     }
 
 
@@ -57,6 +59,7 @@ public class PauseController : MonoBehaviour
                 break;
             case pauseMenuOptions.Guardar:
                 //Save game. Activate menu again when saving is finished.
+                ApiController.saveSaveData(GameData.saveData);
                 Debug.Log("saving...");
                 active = true;
                 break;

@@ -29,7 +29,7 @@ public class GenerateTestData : MonoBehaviour
 
         GameData.saveData.team[0] = controller.getCoremonNum(1);
         GameData.saveData.team[1] = controller.getCoremonNum(5);
-        GameData.saveData.team[2] = controller.getCoremonNum(20);
+        GameData.saveData.team[2] = controller.getCoremonNum(30);
 
         GameData.saveData.username = "TestData";
         GameData.saveData.money = 100;
