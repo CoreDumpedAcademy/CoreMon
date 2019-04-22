@@ -18,12 +18,11 @@ public class BattleMenuOptions : MonoBehaviour
         {
             case BattleController.menuOptions.Atacar:
                 BattleController.active = false;
-                Atack.atacando = true;
+                StartCoroutine("waitToActivate");
                 break;
 
             case BattleController.menuOptions.Cambiar:
                 BattleController.active = false;
-                Debug.Log(BattleController.active);
                 teamMenu.SetActive(true);
                 break;
 
@@ -36,6 +35,12 @@ public class BattleMenuOptions : MonoBehaviour
                 SceneController.loadOverworld();
                 break;
         }
+    }
+
+    IEnumerator waitToActivate()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Atack.atacando = true;
     }
 }
 

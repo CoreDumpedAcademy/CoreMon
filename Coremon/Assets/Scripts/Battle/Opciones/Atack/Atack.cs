@@ -83,7 +83,6 @@ public class Atack : MonoBehaviour
         if (action == AtackMenu.menuOptions.At1)
         {
             cor.Ps -= cor2.Atacks[0].Power * cor2.Dam * typeMult / cor.Def / typeDiv;
-            Debug.Log(cor2.Atacks[0].name);
         }
         else if (action == AtackMenu.menuOptions.At2)
         {
