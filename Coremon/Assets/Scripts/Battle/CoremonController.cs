@@ -99,20 +99,6 @@ public class CoremonController : MonoBehaviour
     /*
     *   Leveling up functions. End
     */
-
-    public Coremon getCoremonNum(int num)
-    {
-        Coremon cor = null;
-        if(num >= 0 && num < 30)
-        {
-            cor = GameData.CoremonData[num - 1];
-            cor.Ps = cor.PsMax;
-            setLvlUpExp(cor);
-            cor.sprite = getCoremonSprite(cor);
-        }
-        return cor;
-    }
-
     public Sprite getCoremonSprite(Coremon cor)
     {
         string index;
@@ -131,8 +117,29 @@ public class CoremonController : MonoBehaviour
 
         return sprite;
     }
+    
+    //Getsa coremon from the data base using its index
+    public Coremon getCoremonNum(int num)
+    {
+        Coremon cor = null;
+        if (num >= 0 && num < 30)
+        {
+            cor = GameData.CoremonData[num - 1];
+            cor.Ps = cor.PsMax;
+            setLvlUpExp(cor);
+            cor.sprite = getCoremonSprite(cor);
+        }
+        return cor;
+    }
 
-     /* Function to apply the exp reward dropped by an enemy */
+
+    public Coremon getWildCoremon()
+    {
+        int index = UnityEngine.Random.Range(0, 30);
+        return getCoremonNum(index);
+    }
+
+    /* Function to apply the exp reward dropped by an enemy */
     public void applyExpRewardExp(Coremon mon, Coremon enemy)
     {
         if (mon.Level < maxLvl) //skip if its called for a mon at max level
